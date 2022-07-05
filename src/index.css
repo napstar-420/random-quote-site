@@ -12,6 +12,7 @@
     --mingzot-font: 'Mingzat', sans-serif;;
     --open-sans: 'Open Sans', sans-serif;
     --poppins: 'Poppins', sans-serif;
+    --kdom-font: 'Kdam Thmor Pro', sans-serif;
 }
 
 .App {
@@ -84,4 +85,39 @@
 
 .tweet-icon {
     margin-right: 0.5rem;
+}
+
+nav {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.8em;
+    background-color: #363636;
+    list-style-type: none;
+}
+
+.navbar_heading {
+    font-size: 1.3rem;
+    font-family: var(--kdom-font);
+    color: var(--main-white-color);
+}
+
+
+.github_link a {
+    display: flex;
+    align-items: center;
+    color: #363636;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: var(--main-white-color);
+    padding:0rem 0.5rem;
+    font-family: var(--mingzot-font);
+    border-radius: 3px;
+    font-weight: 500;
 }
