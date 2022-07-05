@@ -19,7 +19,7 @@ function App() {
   const randomNumber = () => {
     let n1 = Math.floor(Math.random() * (quotes.length - 0 + 1)) + 0;
     setNumber(n1);
-    let n2 = Math.floor(Math.random() * (colors.length - 0 + 1)) + 0;
+    let n2 = Math.floor(Math.random() * (colors.length - 1 - 0 + 1)) + 0;
     setColor(colors[n2]);
     setOpacity(1);
   };
