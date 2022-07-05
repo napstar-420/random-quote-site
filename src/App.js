@@ -4,11 +4,17 @@ import "./index.css";
 import { useEffect, useState } from "react";
 function App() {
   const [quotes, setQuotes] = useState([]);
+  const [number, setNumber] = useState(0);
 
   const fetchQuotes = async () => {
     let response = await fetch("https://type.fit/api/quotes");
-    let data = await response.json();
-    setQuotes(data);
+    response = await response.json();
+    setQuotes(response);
+  };
+
+  const randomNumber = () => {
+    let n = Math.floor(Math.random() * (quotes.length - 0 + 1)) + 0;
+    setNumber(n);
   };
 
   useEffect(() => {
@@ -18,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Quote quotes={quotes} />
+      <Quote quotes={quotes} number={number} randomNumber={randomNumber} />
     </div>
   );
 }
