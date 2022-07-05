@@ -30,7 +30,11 @@ const Quote = ({
         _{quotes[number].author}
       </h3>
       <div className="btns-container">
-        <button
+        <a
+            href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text='` +
+            encodeURIComponent('"' + quotes[number].text + '" ' + quotes[number].author)}
+            rel="noreferrer"
+            target='_blank'
           className="tweet-btn btn"
           style={{ backgroundColor: color, border: `2px solid ${color}` }}
           onMouseEnter={(e) => {
@@ -44,7 +48,7 @@ const Quote = ({
         >
           <FaTwitter className="tweet-icon" style={{ fontSize: "1rem" }} />
           Tweet
-        </button>
+        </a>
         <button
           className="next-btn btn"
           style={{ backgroundColor: color, border: `2px solid ${color}` }}
