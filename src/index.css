@@ -27,7 +27,7 @@
     background-color: #fff;
     color: #000;
     padding: 2em;
-    width: 30em;
+    width: 45%;
     border-radius: 10px;
     box-shadow: -20px 20px blueviolet;
 }
@@ -65,7 +65,7 @@
     border: none;
     color: var(--main-white-color);
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 2px;
     margin-top: 0.5rem;
     background-color: blueviolet;
     border: 2px solid blueviolet;
