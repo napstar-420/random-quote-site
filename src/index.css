@@ -114,6 +114,22 @@ nav {
     font-weight: 500;
 }
 
+.loading {
+    font-size: 2rem;
+    font-family: var(--kdom-font);
+    color: #fff;
+    animation: fade-in-out 1s ease  infinite alternate both;
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .quote-container {
         width: 55%;
