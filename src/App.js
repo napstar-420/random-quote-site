@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [quotes, setQuotes] = useState([]);
   const [number, setNumber] = useState(0);
+  const [opacity, setOpacity] = useState(1);
 
   const fetchQuotes = async () => {
     let response = await fetch("https://type.fit/api/quotes");
@@ -15,6 +16,7 @@ function App() {
   const randomNumber = () => {
     let n = Math.floor(Math.random() * (quotes.length - 0 + 1)) + 0;
     setNumber(n);
+    setOpacity(1);
   };
 
   useEffect(() => {
@@ -24,7 +26,13 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Quote quotes={quotes} number={number} randomNumber={randomNumber} />
+      <Quote
+        quotes={quotes}
+        number={number}
+        opacity={opacity}
+        setOpacity={setOpacity}
+        randomNumber={randomNumber}
+      />
     </div>
   );
 }

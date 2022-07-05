@@ -1,18 +1,16 @@
 import React from "react";
 import { FaTwitter, FaQuoteLeft } from "react-icons/fa";
 
-const Quote = ({ quotes, number ,randomNumber }) => {
+const Quote = ({ quotes, number , randomNumber, opacity, setOpacity }) => {
 
     if(quotes.length === 0){
         return(
             <h1>Loading</h1>
         )
     }
-
-    console.log(quotes);
   
   return (
-    <div className="quote-container">
+    <div className="quote-container" style={{opacity: opacity}}>
       <h2 className="quote">
         <FaQuoteLeft style={{ marginRight: "0.8rem" }} />
         {quotes[number].text}
@@ -23,7 +21,10 @@ const Quote = ({ quotes, number ,randomNumber }) => {
           <FaTwitter className="tweet-icon" />
           Tweet
         </button>
-        <button className="next-btn btn" onClick={randomNumber}>Next Quote</button>
+        <button className="next-btn btn" onClick={()=>{
+            setOpacity(0);
+            setTimeout(function(){randomNumber()},1000)
+        }}>Next Quote</button>
       </div>
     </div>
   );
